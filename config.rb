@@ -3,8 +3,8 @@
 # Tell compass where to find local extensions
 # If you followed directions and ran 'gem install modular-scale' comment the next two lines out:
 extensions_dir = "assets/css/_sass/extensions"
+
 Compass::Frameworks.register('modular-scale', :path => File.expand_path("#{extensions_dir}/modular-scale"))
-Compass::Frameworks.register('sassy-math', :path => File.expand_path("#{extensions_dir}/sassy-math"))
 
 # Uncomment these to use regular Ruby gems.
 # require 'modular-scale'
@@ -15,16 +15,15 @@ http_path = "/"
 css_dir = "assets/css"
 sass_dir = "assets/css/_sass"
 images_dir = "assets/img"
-javascripts_dir = "assets/js"
 
-# You can select your preferred output style here (can be overridden via the command line):
-# output_style = :expanded or :nested or :compact or :compressed
+# You can select your preferred output style here (can be overridden via the command line) :nested or :expanded or :compact or :compressed:
+output_style = :compact
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-# line_comments = false
+line_comments = false
 
 
 # If you prefer the indented syntax, you might want to regenerate this

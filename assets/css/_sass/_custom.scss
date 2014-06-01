@@ -1,8 +1,19 @@
 // Your custom SCSS should be written here...
 header {
-  background-image: url('assets/img/me-splash.png');
-  height: 500px;
+  background: url('../img/me-splash.png') no-repeat center top;
+  height: 100%;
 
-  h1 {
+  .name {
     position: absolute;
+    top: 60%;
   }
+
+  .name-img {
+    background: url('../img/name.png') no-repeat left top;
+    background-size: 70%;
+    width: 100%;
+    height: inherit;
+    position: relative;
+    top: 40%
+  }
+}

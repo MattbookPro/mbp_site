@@ -2,19 +2,38 @@
 layout: default
 ---
 
-<div class="home">
+<header class="row parallax" gumby-parallax="0.2">
+  <!-- <h1 class="name">Matthew Goff</h1> -->
+  <div class="name-img parallax" gumby-parallax="0.6"></div>
+</header>
 
-  <h1>Posts</h1>
-
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
+<nav class="row navbar" id="nav" gumby-fixed="top" gumby-constrain="false">
+  <!-- Toggle for mobile navigation, targeting the <ul> -->
+  <a class="toggle" gumby-trigger="#nav > ul" href="#"><i class="icon-menu"></i></a>
+  <ul class="twelve columns">
+    <li class="skiplink"><a href="#" gumby-goto="[data-target='blog']" gumby-offset="-140">Blog</a></li>
+    <li class="skiplink"><a href="#" gumby-goto="[data-target='resume']" gumby-offset="-140">Resume</a></li>
+    <li class="skiplink"><a href="#" gumby-goto="[data-target='portfolio']" gumby-offset="-140">Portfolio</a></li>
+    <li class="skiplink"><a href="#" gumby-goto="[data-target='about']">About</a></li>
   </ul>
+</nav>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<!-- Blog -->
+<div class="row" data-target="blog" style="height: 500px; background: #ddd;">
+  <h1>Blog</h1>
+</div>
 
+<!-- Resume -->
+<div class="row" data-target="resume" style="height: 500px; background: #aaa;">
+  <h1>Resume</h1>
+</div>
+
+<!-- Portfolio -->
+<div class="row" data-target="portfolio" style="height: 500px; background: #ccc;">
+  <h1>Portfolio</h1>
+</div>
+
+<!-- About -->
+<div class="row" data-target="about" style="height: 500px; background: #bbb;">
+  <h1>About</h1>
 </div>
